@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Noticia+Text&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap');
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration: none;
+    border : none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: serif;
+}
+
+:root{
+    --bg-color : #E3E4E4 ;
+    --second-bg-color : lightgray;
+    --text-color : #0F100F ;
+    --main-color: #D4D4D4;
+    --section-color:#362E2E;
+}
+
+html{
+    font-size:62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background: transparent;
+    color: var(--text-color);
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position:sticky;
+    background-color: transparent;
+    top:0;
+    left:0;
+    width:100%;
+    padding: 1rem 6%;
+    border-bottom: var(--main-color) solid .5px;
+    z-index: 100;
+}
+
+.logo{
+    font-size:2.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight:600;
+}
+
+.navbar a{
+    font-size:1.7rem;
+    color : white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left:3.5rem;
+    transition: .3s;
+}
+
+.navbar a:hover, .navbar a:focus{
+    color:var(--text-color);
+}
+
+.banner{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url('../img/duo-red-green-caftan.jpeg');
+    background-position: left;
+}
+
+.accueil {
+    font-size:25px;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 9%;
+    line-height: 1.5;
+}
+
+.accueil-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 190px;
+    max-width: 60rem;
+}
+
+.accueil-content h1{
+    color:rgba(227, 228, 228, 0.70);
+    opacity: 70%;
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.accueil-content h3{
+    color:rgba(227, 228, 228, 0.70);
+    opacity: 70%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.accueil-content h1, .accueil-content h3 {
+    animation: fadeIn 1s ease forwards;
+    opacity: 0;
+}
+
+.accueil-content .btn-box {
+    display: flex;
+    justify-content: center;
+    margin-top : 30rem;
+    max-width: 35rem;
+    width: 345px;
+    height: 50px;
+}
+
+.btn-box a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border :2px solid var(--main-color);
+    color: var(--main-color);
+    background-color: transparent;
+    width: 6.5rem;
+    height: 6.5rem;
+    border-radius: 16rem;
+    font-size: 1.6rem;
+    text-decoration: none;;
+    letter-spacing: .1rem;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover {
+    color: var(--section-color);
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--main-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.accueil-content .accueil-content-txt{
+    transition: .5s;
+    text-align: center;
+}
+
+/*--------------------- BANNER BOTOM ---------------------*/
+
+
+.banner-bottom{
+    background-color: var(--second-bg-color);
+}
+
+.banner-bottom h2{
+    padding: 2rem;
+    font-size: 3.5rem;
+    text-align: center;
+}
+
+.object{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-bottom-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 600px;
+    margin: 0 auto;
+    padding: 3rem;
+}
+
+.banner-bottom img {
+    width: 65px;
+    height: auto;
+}
+
+/*_____________________ ABOUT _____________________*/
+
+.about-content-txt {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+.about-content .about-content-txt  h2 {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 600;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.about-content .about-content-txt p {
+    text-align: left;
+    font-size: 1.8rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+
+
+/*_____________________ FOOOTER _____________________*/
+
+.footer-iconTop a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background : transparent;
+    color: var(--section-color);
+    border : .2rem solid var(--section-color);
+    border-radius: .6rem;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.footer-iconTop a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left : 0;
+    width: 0;
+    height: 100%;
+    background-color: transparent;
+    z-index: -1;
+    transition: .5s;
+}
+
+.footer-iconTop a:hover::before{
+    font-size: 2.4rem;
+    width: 100%;
+}
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+}
+
+.footer-iconTop a:hover i{
+    color: #362E2E;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--second-bg-color);
+    height: 15rem;
+    padding: 6%;
+    font-size: 1.5rem;
+}
+
+.footer a {
+    color: var(--section-color);
+    margin-bottom: 1rem;
+    text-decoration: none;
+}
+
+#droit{
+    margin-top:2rem;
+}
+
+.footer h3 {
+    color: var(--section-color);
+    margin-bottom: 1rem;
+}
