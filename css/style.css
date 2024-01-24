@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Noticia+Text&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap');
+
 * {
     margin:0;
     padding:0;
@@ -8,7 +8,7 @@
     border : none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: serif;
+    font-family: 'Kaisei Decol', sans-serif;
 }
 
 :root{
@@ -16,7 +16,7 @@
     --second-bg-color : lightgray;
     --text-color : #0F100F ;
     --main-color: #D4D4D4;
-    --section-color:#362E2E;
+    --section-color: #463b3b;
 }
 
 html{
@@ -25,7 +25,7 @@ html{
 }
 
 body{
-    background: transparent;
+    background-color: #C5C7C6;
     color: var(--text-color);
 }
 
@@ -65,7 +65,9 @@ body{
 
 .banner{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url('../img/duo-red-green-caftan.jpeg');
-    background-position: left;
+    background-size: cover;
+    background-position: center;
+    height: 700px;
 }
 
 .accueil {
@@ -88,7 +90,7 @@ body{
 
 .accueil-content h1{
     color:rgba(227, 228, 228, 0.70);
-    opacity: 70%;
+    opacity: 20%;
     font-size: 5rem;
     font-weight: 700;
     margin-bottom: 1rem;
@@ -168,6 +170,14 @@ body{
     text-align: center;
 }
 
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--section-color);
+    margin-bottom: 3.5rem;
+}
+
 /*--------------------- BANNER BOTOM ---------------------*/
 
 
@@ -205,29 +215,280 @@ body{
 
 /*_____________________ ABOUT _____________________*/
 
+.about {
+    background-color: #DEE0E0;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.about-content-img img {
+    width: 300px;
+    height: auto;
+    padding-left:3rem;
+
+}
+
 .about-content-txt {
     display: flex;
     flex-direction: column;
-    background-color: transparent;
+    align-items: center;
+    justify-content: center;
+
+}
+.about-content-txt p{
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: var(--section-color);
+    margin-bottom: 2rem;
+    width: 400px;
+    height: auto;
 }
 
-.about-content .about-content-txt  h2 {
-    text-align: center;
-    font-size: 5rem;
+/*_____________________ FAQ _____________________*/
+
+.faq {
+    background: #D4D4D4;
+    padding: 6%;
+}
+
+.faq-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq-content-txt h3{
+    font-size: 3.5rem;
     font-weight: 600;
-    color: var(--main-color);
-    margin-bottom: 1rem;
+    color: var(--section-color);
+    margin-bottom: 2.5rem;
 }
 
-.about-content .about-content-txt p {
-    text-align: left;
+.faq-content-txt p{
     font-size: 1.8rem;
-    color: var(--main-color);
-    margin-bottom: 1rem;
+    line-height: 1.5;
+    color: var(--section-color);
+    margin-bottom: 2rem;
+    width: 400px;
+    height: auto;
 }
 
+.faq-content-img{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq-content-img img{
+    width: 300px;
+    height: auto;
+    padding: 0 3rem;
+
+}
+
+/*_____________________ SLIDER _____________________*/
 
 
+.slider-container {
+    position: relative;
+    max-width: 1200px;
+    width: 95%;
+    margin-left: 18px;
+}
+
+.slider-wrapper {
+    position: relative;
+}
+
+.slider-wrapper .slide-button{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 50%;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    background-color: darkgrey;
+    color: var(--section-color);
+    cursor: pointer;
+    border : none;
+    outline: none;
+    transform: translateY(-50%);
+    transition: .5s;
+}
+
+.slider-wrapper .slide-button:hover{
+    background-color: #7a7a7a;
+}
+
+.slider-wrapper .slide-button#prev-slide{
+    left: -1px;
+}
+
+.slider-wrapper .slide-button#next-slide{
+    right: -20px;
+}
+
+.slider-container h2 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: var(--section-color);
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.slider-wrapper .img-list {
+    display: grid;
+    gap:18px;
+    overflow-x: auto;
+    font-size: 0;
+    grid-template-columns: repeat(10, 1fr);
+    scrollbar-width: none;
+    margin-bottom: 30px;
+    margin-left: 18px;
+}
+
+.slider-wrapper .img-list::-webkit-scrollbar {
+    display: none;
+}
+
+.slider-wrapper .img-list .img-item {
+    width: 150px;
+    height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.slider-container .slider-scrollbar{
+    display: flex;
+    align-items: center;
+    height: 24px;
+    width: 100%;
+}
+
+.slider-scrollbar .scrollbar-track{
+    position: relative;
+    border-radius: 4px;
+    height: 2px;
+    width: 100%;
+}
+
+.slider-scrollbar:hover .scrollbar-track{
+    height: 3.5px;
+}
+
+.slider-scrollbar .scrollbar-thumb{
+    position: absolute;
+    border-radius:inherit;
+    height: 100%;
+    width: 50%;
+    background-color: black;
+    cursor: pointer;
+}
+
+.slider-scrollbar .scrollbar-thumb:active{
+    cursor: grabbing;
+    height: 3px;
+    top:-2px
+}
+
+.slider-scrollbar .scrollbar-thumb::after{
+    content: '';
+    position: absolute;
+    top: -10px;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+
+}
+/*____________________CONTACT______________________*/
+
+.contact {
+    min-height :auto;
+    padding : 7rem;
+    background-color: #C5C7C6;
+}
+
+.contact form{
+    max-width : 70rem;
+    margin : 0 auto;
+    text-align: center;
+}
+
+.contact form .input-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box .input-field {
+    position: relative;
+    width: 49%;
+    margin : .8rem 0;
+}
+.contact form .focus {
+    position: absolute;
+    top : 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: transparent;
+    border-radius: .6rem;
+    z-index: -1;
+    transition: .5s;
+}
+
+.contact form .input-box .input-field input:focus~.focus,
+.contact form .input-box .input-field input:valid~.focus,
+.contact form .textarea-field textarea:focus~.focus,
+.contact form .textarea-field textarea:valid~.focus{
+    width: 100%;
+}
+
+.contact form .input-box .input-field input, .contact form .textarea-field textarea{
+    width: 100%;
+    height: 100%;
+    padding : 1.5rem;
+    font-size: 1.6rem;
+    background-color: var(--section-color);
+    border-radius: .6rem;
+    border : .2rem solid var(--main-color);
+}
+
+.contact form .input-box .input-field input::placeholder,
+.contact form .textarea-field textarea::placeholder {
+    color : var(--second-bg-color);
+}
+
+.contact form .textarea-field {
+    position: relative;
+    margin : .8rem 0 2.7rem;
+    display: flex;
+}
+
+.contact form .textarea-field textarea{
+    resize: none;
+}
+
+.contact form .btn-box.btns btn {
+    cursor: pointer;
+}
+
+#submit {
+    border-radius: 6px;
+    padding: 2rem 6rem;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--section-color);
+}
 /*_____________________ FOOOTER _____________________*/
 
 .footer-iconTop a {
