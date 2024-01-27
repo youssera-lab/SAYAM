@@ -414,10 +414,6 @@ nav a:hover, .navbar a:focus{
     .faq-content-txt h3 {
         font-size: calc(3.5rem - 0.2rem);
     }
-
-    .faq-content-txt p, .faq-content-txt h3 {
-        padding: 0 4rem;
-    }
 }
 
 /*_____________________ SLIDER _____________________*/
