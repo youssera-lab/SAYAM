@@ -252,7 +252,7 @@ nav a:hover, .navbar a:focus{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 600px;
+    width: 60%;
     margin: 0 auto;
     padding: 3rem;
 }
@@ -376,7 +376,7 @@ nav a:hover, .navbar a:focus{
     line-height: 1.5;
     color: var(--section-color);
     margin-bottom: 2rem;
-    width: 400px;
+    width: 70%;
     height: auto;
 }
 
@@ -387,12 +387,6 @@ nav a:hover, .navbar a:focus{
     justify-content: center;
 }
 
-.faq-content-img img{
-    width: 300px;
-    height: auto;
-    padding: 0 3rem;
-
-}
 
 /*_____________________ FAQ RESPONSIVE _____________________*/
 
@@ -423,7 +417,7 @@ nav a:hover, .navbar a:focus{
     position: relative;
     max-width: 1200px;
     width: 95%;
-    margin-left: 18px;
+    margin-left: 15%;
     padding: 2rem;
 }
 
