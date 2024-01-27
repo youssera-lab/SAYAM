@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width-device-width,intial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>SAYAM CREATION</title>
@@ -11,20 +15,18 @@
 <body>
 
 <section class="banner">
-    <header class="header">
+    <header class="header" id="header">
         <a href="#" class="logo">SAYAM CREATION.</a>
-        <div class="bx bx-menu" id="menu-icon"></div>
-        <nav class="navbar">
-            <a href="#">ABOUT</a>
-            <a href="#">FAQ</a>
-            <a href="#">CONTACT</a>
+        <nav id="nav" class="navbar">
+            <a href="#about">ABOUT</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">CONTACT</a>
         </nav>
+        <div class="bx bx-menu" id="menu-icon"></div>
     </header>
 
     <section class="accueil" id="accueil">
-
         <div class="accueil-content">
-
             <div class="accueil-content-txt">
                 <h1>SAYAM CREATION</h1>
                 <div class="text-animate">
@@ -33,16 +35,13 @@
             </div>
 
             <div class="btn-box">
-                <a href="#"><i class='bx bx-arrow-to-bottom'></i></a>
+                <a href="#banner-bottom"><i class='bx bx-arrow-to-bottom'></i></a>
             </div>
-
         </div>
-
     </section>
-
 </section>
 
-<section class="banner-bottom">
+<section class="banner-bottom" id="banner-bottom">
     <h2 class="heading"> SAYAM vous offre </h2>
     <div class="banner-bottom-content">
 
@@ -61,52 +60,108 @@
     </div>
 </section>
 
-<section class="about">
+<section class="about" id="about">
     <div class="about-content">
+        <div class="about-content-img">
+            <img src="./img/twist-duo-caftan.png" alt="">
+        </div>
         <div class="about-content-txt">
             <h2 class="heading"> Notre Histoire </h2>
             <p> Lorem ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
         </div>
     </div>
 </section>
 
-<section class="faq">
+<section class="slider-container">
+    <h2> Des caftans et bien plus encore ...</h2>
+    <div class="slider-wrapper">
+        <button id="prev-slide" class="slide-button material-symbols-out chevron_left"><i class='bx bx-chevron-left'></i></button>
+        <div class="img-list">
+            <img src="./img/slider/img-1.png" alt="" class="img-item">
+            <img src="./img/slider/img-2.png" alt="" class="img-item">
+            <img src="./img/slider/img-3.png" alt="" class="img-item">
+            <img src="./img/slider/img-4.png" alt="" class="img-item">
+            <img src="./img/slider/img-5.png" alt="" class="img-item">
+            <img src="./img/slider/img-6.png" alt="" class="img-item">
+            <img src="./img/slider/img-7.png" alt="" class="img-item">
+            <img src="./img/slider/img-8.jpg" alt="" class="img-item">
+            <img src="./img/slider/img-9.png" alt="" class="img-item">
+            <img src="./img/slider/img-10.jpg" alt="" class="img-item">
+        </div>
+        <button id="next-slide" class="slide-button material-symbols-out chevron_right"><i class='bx bxs-chevron-right' ></i></button>
+    </div>
+</section>
+
+<section class="faq" id="faq">
     <div class="faq-content">
         <div class="faq-content-txt">
             <h2 class="heading"> FAQ </h2>
-            <p> Lorem ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
+            <h3>Comment puis-je réserver un caftan chez SAYAM ?</h3>
+            <p> Pour réserver un caftan, il vous faut prendre rendez-vous pour un essayage. Vous pouvez nous contacter en message privé pour nous indiquer vos disponibilités, le modèle désiré et le nombre de personnes qui vous accompagneront.</p>
+
+            <h3>Y a-t-il des conditions spécifiques pour la location des caftans ?</h3>
+            <p>Oui, la location dure trois jours. En cas de retard dans la restitution du caftan, des frais supplémentaires seront ajoutés. De plus, un acompte non remboursable est requis pour confirmer la réservation.</p>
+
+            <h3>Est-ce que je dois payer une caution pour la location ?</h3>
+            <p>Une caution d'au moins 50% du prix de la location est nécessaire au moment de la restitution du caftan. Les paiements peuvent être effectués via Paypal, Paylib ou en espèces.</p>
+
+            <h3>Que se passe-t-il si je dois annuler mon rendez-vous ?</h3>
+            <p>Si vous devez annuler votre rendez-vous, veuillez nous contacter 24 heures à l'avance. Sinon, le rendez-vous sera considéré comme annulé.</p>
         </div>
 
         <div class="faq-content-img">
-            <img src="./img/red-caftan-miror.jpeg" alt="faq">
+            <img src="./img/cyan-caftan-miror.jpeg" alt="">
         </div>
     </div>
-
 </section>
+
+<section class="contact" id="contact">
+    <h2 class="heading">Contactez-<span>nous</span></h2>
+    <form action="src/traitement.php" method="post">
+        <div class="input-box">
+            <div class="input-field">
+                <input type="text" placeholder="Nom" name="nom" id="nom" required>
+                <span class="focus"></span>
+            </div>
+            <div class="input-field">
+                <input type="text" placeholder="E-mail"  name="email" id="email" required>
+                <span class="focus"></span>
+            </div>
+        </div>
+
+        <div class="input-box">
+            <div class="input-field">
+                <input type="tel" placeholder="Télephone" name="tel" id="tel" required>
+                <span class="focus"></span>
+            </div>
+            <div class="input-field">
+                <input type="text" placeholder="Objet"  name="objet" id="objet" required>
+                <span class="focus"></span>
+            </div>
+        </div>
+        <div class="textarea-field">
+            <textarea cols="30" rows="10" placeholder="Votre Message" name="message" id="message" required></textarea>
+            <span class="focus"></span>
+        </div>
+        <div class="btn-box btns">
+            <a class="btn" id="submit">Envoyer</a>
+        </div>
+    </form>
+</section>
+<script src="/js/script.js"></script>
 </body>
 <footer class="footer">
     <div class="footer-contact">
         <h3>Suivez-nous</h3>
-        <p><i class='bx bxl-instagram'></i> sayamcreation</p>
-        <p><i class='bx bxl-pinterest' ></i> sayam.creation</p>
-        <p><i class='bx bxl-facebook'></i> sayam.cre</p>
-        <p><i class='bx bxl-snapchat' ></i> sayamcreation</p>
-        <p><i class='bx bxs-map'></i> Montpellier, France</p>
+        <p><a href="https://www.instagram.com/sayamcreation/" target="_blank"><i class='bx bxl-instagram'></i> sayamcreation</a></p>
+        <p><a href="https://www.pinterest.com/sayam.creation" target="_blank"><i class='bx bxl-pinterest'></i> sayam.creation</a></p>
+        <p><a href="https://www.tiktok.com/@sayamcreation" target="_blank"><i class='bx bxl-tiktok'></i> sayamcreation</a></p>
+        <p><a href="https://www.facebook.com/profile.php?id=100089582538941" target="_blank"><i class='bx bxl-facebook'></i> sayam.cre</a></p>
+        <p><a href="https://www.snapchat.com/add/sayamcreation" target="_blank"><i class='bx bxl-snapchat'></i> sayamcreation</a></p>
+        <p><a href="https://maps.google.com/?q=Montpellier, France" target="_blank"><i class='bx bxs-map'></i> Montpellier, France</a></p>
         <p id="droit"> © 2024 by Youssera OULMEKKI | Tous droits réservés.</p>
     </div>
-
-    <div class="footer-categories">
-        <h3>Categories</h3>
-        <p><a href="#">ABOUT</a></p>
-        <p><a href="#">FAQ</a></p>
-        <p><a href="#">CONTACT</a></p>
-    </div>
-
     <div class="footer-iconTop">
         <a href="#"><i class='bx bxs-up-arrow-alt'></i></a>
     </div>
