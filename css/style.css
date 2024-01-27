@@ -56,7 +56,7 @@ body{
 
 @media screen and (max-width: 650px){
     .banner{
-        height: 80vh;
+        height: 60vh;
     }
 
     #menu-icon {
