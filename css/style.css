@@ -29,17 +29,16 @@ body{
     color: var(--text-color);
 }
 
-.header{
+.header {
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position:sticky;
     background-color: transparent;
-    top:0;
-    left:0;
-    width:100%;
+    width: 100%;
     padding: 1rem 6%;
-    border-bottom: var(--main-color) solid .5px;
+    border-bottom: var(--main-color) solid .2px;
     z-index: 100;
 }
 
@@ -50,24 +49,70 @@ body{
     font-weight:600;
 }
 
-.navbar a{
+#menu-icon{
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 650px){
+    .banner{
+        height: 80vh;
+    }
+
+    #menu-icon {
+        display: block;
+        color: white;
+        font-size: 2.5rem;
+    }
+
+    #nav #menu-icon:before {
+        content: '\2630';
+    }
+
+    #nav {
+        background-color: black;
+        opacity: 80%;
+        color: #696767;
+        width: 100%;
+        left: -100%;
+        position: fixed;
+        top:5rem;
+        display: flex;
+        flex-direction: column;
+        transition: .25s;
+    }
+
+    #nav a {
+        padding: 1rem 0;
+    }
+    nav a:hover{
+        color: white;
+    }
+
+    #nav.navbar a{
+        left: 0;
+    }
+}
+
+nav a{
     font-size:1.7rem;
-    color : white;
+    color : #adadad;
     text-decoration: none;
     font-weight: 500;
     margin-left:3.5rem;
     transition: .3s;
 }
 
-.navbar a:hover, .navbar a:focus{
-    color:var(--text-color);
+nav a:hover, .navbar a:focus{
+    color: white;
 }
 
 .banner{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url('../img/duo-red-green-caftan.jpeg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url('../img/Pink and cream facebook banner .png');
     background-size: cover;
     background-position: center;
-    height: 700px;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
 .accueil {
@@ -120,14 +165,18 @@ body{
 .accueil-content .btn-box {
     display: flex;
     justify-content: center;
-    margin-top : 30rem;
+    margin-top : 15rem;
     max-width: 35rem;
     width: 345px;
     height: 50px;
 }
 
+.btn-box{
+    position : relative;
+}
+
 .btn-box a {
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -149,7 +198,7 @@ body{
     color: var(--section-color);
 }
 
-.btn-box a::before {
+.accueil .btn-box a::before {
     content: '';
     position: absolute;
     top: 0;
@@ -213,6 +262,26 @@ body{
     height: auto;
 }
 
+/*--------------------- BANNER BOTOM RESPONSIVE ---------------------*/
+
+@media screen and (max-width:600px) {
+    .banner-bottom-content {
+        flex-direction: row;
+        align-items: center;
+        gap: 2.5rem;
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .banner-bottom-content {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+
 /*_____________________ ABOUT _____________________*/
 
 .about {
@@ -229,9 +298,17 @@ body{
 .about-content-img img {
     width: 300px;
     height: auto;
-    padding-left:3rem;
-
+    padding-left: 3rem;
+    transform: translateX(50px);
+    opacity: 0;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 }
+
+.about-content-img img.in-view {
+    transform: translateX(0);
+    opacity: 1;
+}
+
 
 .about-content-txt {
     display: flex;
@@ -249,6 +326,25 @@ body{
     height: auto;
 }
 
+/*--------------------- ABOUT RESPONSIVE ---------------------*/
+
+@media screen and (max-width:700px) {
+    .about-content {
+        flex-direction: column-reverse;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .about-content-img img {
+        width: 200px;
+        height: auto;
+        padding-left: 0;
+    }
+
+    .about-content-txt p {
+        padding: 0 4rem;
+    }
+}
 /*_____________________ FAQ _____________________*/
 
 .faq {
@@ -293,6 +389,32 @@ body{
 
 }
 
+/*_____________________ FAQ RESPONSIVE _____________________*/
+
+@media screen and (max-width:700px) {
+    .faq-content {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .faq-content-img img {
+        display: none;
+    }
+
+    .faq-content-txt p {
+        font-size: calc(1.8rem - 0.2rem);
+    }
+
+    .faq-content-txt h3 {
+        font-size: calc(3.5rem - 0.2rem);
+    }
+
+    .faq-content-txt p, .faq-content-txt h3 {
+        padding: 0 4rem;
+    }
+}
+
 /*_____________________ SLIDER _____________________*/
 
 
@@ -301,6 +423,7 @@ body{
     max-width: 1200px;
     width: 95%;
     margin-left: 18px;
+    padding: 2rem;
 }
 
 .slider-wrapper {
@@ -363,6 +486,12 @@ body{
     height: 250px;
     object-fit: cover;
     cursor: pointer;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.slider-wrapper .img-list .img-item:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
 }
 
 .slider-container .slider-scrollbar{
@@ -379,34 +508,6 @@ body{
     width: 100%;
 }
 
-.slider-scrollbar:hover .scrollbar-track{
-    height: 3.5px;
-}
-
-.slider-scrollbar .scrollbar-thumb{
-    position: absolute;
-    border-radius:inherit;
-    height: 100%;
-    width: 50%;
-    background-color: black;
-    cursor: pointer;
-}
-
-.slider-scrollbar .scrollbar-thumb:active{
-    cursor: grabbing;
-    height: 3px;
-    top:-2px
-}
-
-.slider-scrollbar .scrollbar-thumb::after{
-    content: '';
-    position: absolute;
-    top: -10px;
-    bottom: -10px;
-    left: 0;
-    right: 0;
-
-}
 /*____________________CONTACT______________________*/
 
 .contact {
@@ -418,6 +519,7 @@ body{
 .contact form{
     max-width : 70rem;
     margin : 0 auto;
+    padding: 2rem;
     text-align: center;
 }
 
@@ -482,13 +584,21 @@ body{
 }
 
 #submit {
-    border-radius: 6px;
-    padding: 2rem 6rem;
     margin: 0 auto;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    height: 5rem;
     background-color: var(--section-color);
+    border-radius: .6rem;
+    border : .2rem solid var(--main-color);
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    transition: .5s;
 }
+
+#submit:hover {
+    background-color: #2a2424;
+}
+
 /*_____________________ FOOOTER _____________________*/
 
 .footer-iconTop a {
@@ -536,7 +646,7 @@ body{
     align-items: center;
     justify-content: space-between;
     background-color: var(--second-bg-color);
-    height: 15rem;
+    height: 20rem;
     padding: 6%;
     font-size: 1.5rem;
 }
